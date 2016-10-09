@@ -1,0 +1,40 @@
+<article>
+    <table class="table table-striped edit-table">
+        <thead>
+        <th>
+            Имя
+        </th>
+        <th>
+            Фамилия
+        </th>
+        <th>
+            Стаж
+        </th>
+        <th>
+            Возраст
+        </th>
+        <th>
+            Адрес
+        </th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in persons">
+            <td ng-mouseenter="rowActive($event, true)" ng-mouseleave="rowActive($event, false)">
+                <input type="text" ng-model="person.name" ng-blur="isDirty($event)">
+            </td>
+            <td ng-mouseenter="rowActive($event, true)" ng-mouseleave="rowActive($event, false)">
+                <input type="text" ng-model="person.surname" ng-blur="isDirty($event)">
+            </td>
+            <td ng-mouseenter="rowActive($event, true)" ng-mouseleave="rowActive($event, false)">
+                <input type="text" ng-model="person.seniority" ng-blur="isDirty($event)">
+            </td>
+            <td ng-mouseenter="rowActive($event, true)" ng-mouseleave="rowActive($event, false)">
+                <input type="text" ng-model="person.age" ng-blur="isDirty($event)">
+            </td>
+            <td ng-mouseenter="rowActive($event, true)" ng-mouseleave="rowActive($event, false)">
+                <input type="text" ng-model="person.address" ng-blur="isDirty($event)">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</article>
